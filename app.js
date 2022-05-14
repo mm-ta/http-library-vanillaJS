@@ -31,10 +31,19 @@ const putUrl = "https://jsonplaceholder.typicode.com/posts/10";
 // });
 
 // Create a resource (test POST request)
-httpLib.post(postUrl, data, function (error, post) {
+// httpLib.post(postUrl, data, function (error, post) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log(post);
+//   }
+// });
+
+// Update a resource (test PUT request)
+httpLib.put(putUrl, data, function (error, updatedPost) { 
   if (error) {
     console.log(error);
   } else {
-    console.log(post);
+    console.log(updatedPost);
   }
 });
