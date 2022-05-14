@@ -92,6 +92,6 @@ const httpLib = new HttpLib3;
 //   .catch(error => console.log(error));
 
 // tset DELETE request
-// httpLib.delete(deleteUrl)
-//   .then(response => console.log(response))
-//   .catch(error => console.log(error));
+httpLib.delete(deleteUrl)
+  .then(response => console.log(response))
+  .catch(error => console.log(error));

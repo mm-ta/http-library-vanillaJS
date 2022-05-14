@@ -1,21 +1,21 @@
 /**
- * async-await version of the previous library
+ * async-await version of the previous library (V3)
  */
 class HttpLib3 {
   // make GET request
   async get(url) {
     try {
       const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    } catch(e) {
+      const responsedata = await response.json();
+      return responsedata;
+    } catch (e) {
       return `Error is ${e}`;
     }
   };
 
   // make POST request
   async post(url, data){
-    try{
+    try {
       const response = await fetch(url, {
         'method': 'POST',
         headers: {
@@ -23,8 +23,9 @@ class HttpLib3 {
         },
         body: JSON.stringify(data)
       });
-      const data = await response.json();
-      return data;
+
+      const responsedata = await response.json();
+      return responsedata;
     } catch(e) {
       return `Error is ${e}`;
     }
@@ -40,8 +41,9 @@ class HttpLib3 {
         },
         body: JSON.stringify(data)
       });
-      const data = await response.json();
-      return data;
+
+      const responsedata = await response.json();
+      return responsedata;
     } catch(e) {
       return `Error is ${e}`;
     }
