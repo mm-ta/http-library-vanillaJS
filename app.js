@@ -1,7 +1,17 @@
 const httpLib = new HttpLib();
+const data = {
+  title : "Custom Post",
+  body : "This is a custom post blah blah blah.",
+  userId : 1,
+};
 
-// test GET request (retrieve a list of resources)
-// httpLib.get('https://jsonplaceholder.typicode.com/posts', function (error, posts) {
+const indexUrl = "https://jsonplaceholder.typicode.com/posts";
+const showUrl = "https://jsonplaceholder.typicode.com/posts/1";
+const postUrl = "https://jsonplaceholder.typicode.com/posts";
+const putUrl = "https://jsonplaceholder.typicode.com/posts/10";
+
+// Retrieve a list of resources (test GET request)
+// httpLib.get(indexUrl, function (error, posts) {
 //   if (error) {
 //     console.log(error);
 //   } else {
@@ -10,14 +20,21 @@ const httpLib = new HttpLib();
 //   }
 // });
 
-// test GET request (retirieve a single resource)
-httpLib.get('https://jsonplaceholder.typicode.com/posts/1', function (error, posts) {
+//  Retirieve a single resource (test GET request)
+// httpLib.get(showUrl, function (error, posts) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     // console.log(JSON.parse(posts));
+//     console.log(posts);
+//   }
+// });
+
+// Create a resource (test POST request)
+httpLib.post(postUrl, data, function (error, post) {
   if (error) {
     console.log(error);
   } else {
-    // console.log(JSON.parse(posts));
-    console.log(posts);
+    console.log(post);
   }
 });
-
-// test POST request (create a new resource)
