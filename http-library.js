@@ -45,4 +45,17 @@ HttpLib.prototype.put = function (url, data, callback) {
 };
 
 // make DELETE request
-
+HttpLib.prototype.delete = function (url, callback) {
+  this.http.open('DELETE', url, true);
+  
+  const self = this;
+  this.http.onload = function () {
+    if (self.http.status === 200) {
+      callback(null, 'Post Deleted Successfully');
+    } else {
+      callback('Error: ' + self.http.status);
+    }
+  };
+  
+  this.http.send();
+};

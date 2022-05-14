@@ -9,6 +9,7 @@ const indexUrl = "https://jsonplaceholder.typicode.com/posts";
 const showUrl = "https://jsonplaceholder.typicode.com/posts/1";
 const postUrl = "https://jsonplaceholder.typicode.com/posts";
 const putUrl = "https://jsonplaceholder.typicode.com/posts/10";
+const deleteUrl = "https://jsonplaceholder.typicode.com/posts/10";
 
 // Retrieve a list of resources (test GET request)
 // httpLib.get(indexUrl, function (error, posts) {
@@ -40,10 +41,19 @@ const putUrl = "https://jsonplaceholder.typicode.com/posts/10";
 // });
 
 // Update a resource (test PUT request)
-httpLib.put(putUrl, data, function (error, updatedPost) { 
+// httpLib.put(putUrl, data, function (error, updatedPost) { 
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log(updatedPost);
+//   }
+// });
+
+// Delete a resource (DELETE method)
+httpLib.delete(deleteUrl, function (error, response) {
   if (error) {
     console.log(error);
   } else {
-    console.log(updatedPost);
+    console.log(response);
   }
 });
