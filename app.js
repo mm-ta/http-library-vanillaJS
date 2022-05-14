@@ -11,6 +11,11 @@ const postUrl = "https://jsonplaceholder.typicode.com/posts";
 const putUrl = "https://jsonplaceholder.typicode.com/posts/10";
 const deleteUrl = "https://jsonplaceholder.typicode.com/posts/10";
 
+
+/**
+ * 
+ * using the first version of the library (http-library.js)
+ */
 // Retrieve a list of resources (test GET request)
 // httpLib.get(indexUrl, function (error, posts) {
 //   if (error) {
@@ -50,10 +55,37 @@ const deleteUrl = "https://jsonplaceholder.typicode.com/posts/10";
 // });
 
 // Delete a resource (DELETE method)
-httpLib.delete(deleteUrl, function (error, response) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(response);
-  }
-});
+// httpLib.delete(deleteUrl, function (error, response) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log(response);
+//   }
+// });
+
+
+
+/**
+ * using the second version of the http library
+ */
+const httpLib2 = new HttpLib2;
+
+// test GET request
+// httpLib2.get(indexUrl)
+//   .then(posts => console.log(posts))
+//   .catch(error => console.log(error));
+
+// test POST request
+// httpLib2.post(postUrl, data)
+//   .then(post => console.log(post))
+//   .catch(error => console.log(error));
+
+// test PUT request
+// httpLib2.put(putUrl, data)
+//   .then(post => console.log(post))
+//   .catch(error => console.log(error));
+
+// tset DELETE request
+// httpLib2.delete(deleteUrl)
+//   .then(response => console.log(response))
+//   .catch(error => console.log(error));
