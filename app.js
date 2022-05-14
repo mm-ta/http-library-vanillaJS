@@ -1,4 +1,4 @@
-const httpLib = new HttpLib();
+// predefine variables
 const data = {
   title : "Custom Post",
   body : "This is a custom post blah blah blah.",
@@ -16,6 +16,7 @@ const deleteUrl = "https://jsonplaceholder.typicode.com/posts/10";
  * 
  * using the first version of the library (http-library.js)
  */
+// const httpLib = new HttpLib();
 // Retrieve a list of resources (test GET request)
 // httpLib.get(indexUrl, function (error, posts) {
 //   if (error) {
@@ -68,24 +69,29 @@ const deleteUrl = "https://jsonplaceholder.typicode.com/posts/10";
 /**
  * using the second version of the http library
  */
-const httpLib2 = new HttpLib2;
+// const httpLib = new HttpLib2;
+
+/**
+ * using the third version of the http library
+ */
+const httpLib = new HttpLib3;
 
 // test GET request
-// httpLib2.get(indexUrl)
+// httpLib.get(indexUrl)
 //   .then(posts => console.log(posts))
 //   .catch(error => console.log(error));
 
 // test POST request
-// httpLib2.post(postUrl, data)
+// httpLib.post(postUrl, data)
 //   .then(post => console.log(post))
 //   .catch(error => console.log(error));
 
 // test PUT request
-// httpLib2.put(putUrl, data)
+// httpLib.put(putUrl, data)
 //   .then(post => console.log(post))
 //   .catch(error => console.log(error));
 
 // tset DELETE request
-// httpLib2.delete(deleteUrl)
+// httpLib.delete(deleteUrl)
 //   .then(response => console.log(response))
 //   .catch(error => console.log(error));
